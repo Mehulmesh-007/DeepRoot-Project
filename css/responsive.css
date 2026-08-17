@@ -1,0 +1,92 @@
+/* responsive.css */
+
+/* Large Desktop */
+@media (max-width: 1440px) {
+  /* Inherit mostly from style.css */
+}
+
+/* Desktop */
+@media (max-width: 1200px) {
+  .section-title h2 {
+    font-size: 2.2rem;
+  }
+}
+
+/* Tablet Landscape */
+@media (max-width: 992px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+  
+  .section-py {
+    padding: 60px 0;
+  }
+}
+
+/* Tablet Portrait & Mobile Navigation */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background-color: var(--bg-white);
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 40px;
+    transition: left 0.3s ease;
+    overflow-y: auto;
+  }
+
+  .nav-links.nav-active {
+    left: 0;
+  }
+
+  /* Hamburger Animation */
+  .hamburger.toggle span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  
+  .hamburger.toggle span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.toggle span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  .section-title h2 {
+    font-size: 2rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-socials {
+    justify-content: center;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .section-title h2 {
+    font-size: 1.75rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+}
